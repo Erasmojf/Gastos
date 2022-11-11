@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GastosApp: App {
+    @StateObject var transactionListVM = TransactionListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(transactionListVM)
         }
     }
 }

@@ -52,6 +52,10 @@ struct TransactionRow: View {
 
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionRow(transaction: transactionPreview)
+        Group {
+            TransactionRow(transaction: transactionPreviewData)
+            TransactionRow(transaction: transactionPreviewData)
+                .preferredColorScheme(.dark)
+        }
     }
 }

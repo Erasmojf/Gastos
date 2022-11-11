@@ -10,6 +10,6 @@
 import Foundation
 import SwiftUI
 
-var transactionPreview = Transaction(id: 1, date: "07/11/2022", institution: "NU", account: "Visa", merchant: "Apples", amount: 12.56, type: "debit", categoryId: 007, category: "Software", isPending: false, isTransfer: false, isExpense: true, isEdited: false)
+var transactionPreviewData = Transaction(id: 1, date: "07/11/2022", institution: "NU", account: "Visa", merchant: "Apples", amount: 12.56, type: "debit", categoryId: 007, category: "Software", isPending: false, isTransfer: false, isExpense: true, isEdited: false)
 
-var transactionListPreview = [Transaction](repeating: transactionPreview, count: 10)
+var transactionListPreviewData = [Transaction](repeating: transactionPreviewData, count: 10)

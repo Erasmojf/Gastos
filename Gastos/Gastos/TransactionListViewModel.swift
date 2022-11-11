@@ -8,12 +8,17 @@
 //  Fidju de Bideira de Feira de Caracol
 
 import Foundation
-
+import Combine
 final class TransactionListViewModel: ObservableObject {
     @Published var transactions: [Transaction] = []
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        getTransactions()
+    }
     
     func getTransactions() {
-       guard let url = URL(string: "https://designcode.io/date/transactions.json") else {
+        guard let url = URL(string: "https://designcode.io/data/transactions.json") else {
             print("Invalid URL")
             return
         }
@@ -27,10 +32,19 @@ final class TransactionListViewModel: ObservableObject {
             }
             .decode(type: [Transaction].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: {complition in switch complition{
-                
-            }}, receiveValue: { [Transaction] in
-                code
-            })
+            .sink { completion in
+                switch completion {
+                case .failure (let error):
+                    print("Error fetching transactions", error.localizedDescription)
+                case .finished:
+                    print("Finished fetching transactions")
+                }
+              } receiveValue: { [weak self] result in
+                    self?.transactions = result
+                    dump(self?.transactions)
+               }
+                .store(in: &cancellables)
+            }
     }
-}
+    
+
