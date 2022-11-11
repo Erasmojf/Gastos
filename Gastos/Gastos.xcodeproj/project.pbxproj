@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F347F227291EF5E300A89D7A /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347F226291EF5E300A89D7A /* TransactionList.swift */; };
+		F347F22A291F019900A89D7A /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = F347F229291F019900A89D7A /* Collections */; };
 		F3A57F2C2919739400613AB0 /* GastosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A57F2B2919739400613AB0 /* GastosApp.swift */; };
 		F3A57F2E2919739400613AB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A57F2D2919739400613AB0 /* ContentView.swift */; };
 		F3A57F302919739600613AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A57F2F2919739600613AB0 /* Assets.xcassets */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F347F226291EF5E300A89D7A /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		F3A57F282919739400613AB0 /* Gastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A57F2B2919739400613AB0 /* GastosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosApp.swift; sourceTree = "<group>"; };
 		F3A57F2D2919739400613AB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F347F22A291F019900A89D7A /* Collections in Frameworks */,
 				F3A57F432919A31700613AB0 /* SwiftUIFontIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +71,7 @@
 			children = (
 				F3A57F2B2919739400613AB0 /* GastosApp.swift */,
 				F3A57F2D2919739400613AB0 /* ContentView.swift */,
+				F347F226291EF5E300A89D7A /* TransactionList.swift */,
 				F3DC4738291BDF3C0061DF43 /* RecentTransactionList.swift */,
 				F3A57F3F291986AF00613AB0 /* TransactionRow.swift */,
 				F3A57F442919A44600613AB0 /* TransactionListViewModel.swift */,
@@ -105,6 +110,7 @@
 			name = Gastos;
 			packageProductDependencies = (
 				F3A57F422919A31700613AB0 /* SwiftUIFontIcon */,
+				F347F229291F019900A89D7A /* Collections */,
 			);
 			productName = Gastos;
 			productReference = F3A57F282919739400613AB0 /* Gastos.app */;
@@ -136,6 +142,7 @@
 			mainGroup = F3A57F1F2919739400613AB0;
 			packageReferences = (
 				F3A57F412919A31700613AB0 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
+				F347F228291F019900A89D7A /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = F3A57F292919739400613AB0 /* Products */;
 			projectDirPath = "";
@@ -164,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A57F3E291984C100613AB0 /* PreviewData.swift in Sources */,
+				F347F227291EF5E300A89D7A /* TransactionList.swift in Sources */,
 				F3DC4739291BDF3C0061DF43 /* RecentTransactionList.swift in Sources */,
 				F3A57F3C2919811F00613AB0 /* TransactionModel.swift in Sources */,
 				F3A57F2E2919739400613AB0 /* ContentView.swift in Sources */,
@@ -371,6 +379,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F347F228291F019900A89D7A /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		F3A57F412919A31700613AB0 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
@@ -382,6 +398,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F347F229291F019900A89D7A /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F347F228291F019900A89D7A /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
 		F3A57F422919A31700613AB0 /* SwiftUIFontIcon */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3A57F412919A31700613AB0 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */;
