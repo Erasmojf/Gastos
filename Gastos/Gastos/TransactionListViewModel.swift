@@ -9,6 +9,9 @@
 
 import Foundation
 import Combine
+
+typealias TransactionGroup = [String: [Transaction]]
+
 final class TransactionListViewModel: ObservableObject {
     @Published var transactions: [Transaction] = []
     private var cancellables = Set<AnyCancellable>()
